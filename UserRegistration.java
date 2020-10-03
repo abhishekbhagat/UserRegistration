@@ -32,7 +32,7 @@ public class UserRegistration {
 		// UC3
 		System.out.println("Enter the email id");
 		String emailId = sc.next();
-		String patternEmailId = "[A-Z]{1}[a-zA-Z]{2,}";
+		String patternEmailId = "^[a-zA-Z0-9]+[_+-.]{1}[a-zA-Z0-9]+@[A-Za-z]+(.)[A-Za-z]{2,4}$";
 
 		Pattern pEmailId = Pattern.compile(patternEmailId);
 		Matcher mEmailId = pEmailId.matcher(emailId);
