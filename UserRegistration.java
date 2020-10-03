@@ -40,6 +40,18 @@ public class UserRegistration {
 			System.out.println("User EmailId is valid ");
 		else
 			System.out.println("User  Email Id is invalid");
+
+		// uc4
+		System.out.println("Enter the Mobile Number");
+		String mobileNumber = sc.next();
+		String patternMobileNumber = "[1-9]{1}[0-9]{1}( )[1-9]{1}[0-9]{9}";
+
+		Pattern pMobileNumber = Pattern.compile(patternMobileNumber);
+		Matcher mMobileNumber = pMobileNumber.matcher(mobileNumber);
+		if (mMobileNumber.matches())
+			System.out.println("User mobile number is valid ");
+		else
+			System.out.println("User  mobile number is  invalid");
 		sc.close();
 	}
 
