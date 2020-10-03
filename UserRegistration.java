@@ -6,7 +6,6 @@ import java.util.regex.*;
 public class UserRegistration {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		/*
 		System.out.println("Enter the First Name");
 		String firstName = sc.next();
 		String pattern = "[A-Z]{1}[a-zA-Z]{2,}";
@@ -55,10 +54,9 @@ public class UserRegistration {
 			System.out.println("User  mobile number is  invalid");
 
 		// password validation
-		*/
 		System.out.println("Enter the Password");
 		String password = sc.next();
-		String patternPassword = "(?=.*[A-Z])[a-zA-Z0-9]{8,}$";
+		String patternPassword = "(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$";
 
 		Pattern pPassword = Pattern.compile(patternPassword);
 		Matcher mPassword = pPassword.matcher(password);
