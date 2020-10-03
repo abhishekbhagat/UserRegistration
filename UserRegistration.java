@@ -11,7 +11,7 @@ public class UserRegistration {
 		String pattern = "[A-Z]{1}[a-zA-Z]{2,}";
 
 		Pattern pFirstName = Pattern.compile(pattern);
-		Matcher mFirstName = p.matcher(firstName);
+		Matcher mFirstName = pFirstName.matcher(firstName);
 		if (mFirstName.matches())
 			System.out.println("User First Name is valid ");
 		else
@@ -22,12 +22,24 @@ public class UserRegistration {
 		String lastName = sc.next();
 		String patternLastName = "[A-Z]{1}[a-zA-Z]{2,}";
 
-		Pattern pLastName = Pattern.compile(pattern);
+		Pattern pLastName = Pattern.compile(patternLastName);
 		Matcher mLastName = pLastName.matcher(lastName);
 		if (mLastName.matches())
 			System.out.println("User Last Name is valid ");
 		else
 			System.out.println("User Last Name is invalid");
+
+		// UC3
+		System.out.println("Enter the email id");
+		String emailId = sc.next();
+		String patternEmailId = "[A-Z]{1}[a-zA-Z]{2,}";
+
+		Pattern pEmailId = Pattern.compile(patternEmailId);
+		Matcher mEmailId = pEmailId.matcher(emailId);
+		if (mEmailId.matches())
+			System.out.println("User EmailId is valid ");
+		else
+			System.out.println("User  Email Id is invalid");
 		sc.close();
 	}
 
